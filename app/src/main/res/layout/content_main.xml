@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sanjaymistry.mymatchstart.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:scrollbarSize="40dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginTop="45dp"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:id="@+id/totalTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="What is"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalTextView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/whatisTextView"
+        style="@android:style/Widget.DeviceDefault.TextView"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="40sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/percentageEditText"
+        android:hint="Enter Percentage"
+        android:textAlignment="center"
+        android:layout_below="@+id/whatisTextView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        style="@android:style/Widget.DeviceDefault.TextView"
+        android:layout_alignBaseline="@+id/percentageEditText"
+        android:layout_alignBottom="@+id/percentageEditText"
+        android:layout_toRightOf="@+id/percentageEditText"
+        android:layout_toEndOf="@+id/percentageEditText"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/amountEditText"
+        android:hint="Enter Number"
+        android:textAlignment="center"
+        android:layout_below="@+id/ofTextView"
+        android:layout_alignLeft="@+id/percentageEditText"
+        android:layout_alignStart="@+id/percentageEditText" />
+
+    <TextView
+        android:text="of"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ofTextView"
+        android:textSize="24sp"
+        style="@android:style/Widget.DeviceDefault.TextView"
+        android:layout_below="@+id/percentageEditText"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calcButton"
+        android:layout_below="@+id/amountEditText"
+        android:layout_marginTop="19dp"
+        android:background="#e52828"
+        android:textColor="#ffffff"
+        android:layout_alignRight="@+id/amountEditText"
+        android:layout_alignEnd="@+id/amountEditText"
+        android:layout_alignLeft="@+id/amountEditText"
+        android:layout_alignStart="@+id/amountEditText" />
+
+</RelativeLayout>
